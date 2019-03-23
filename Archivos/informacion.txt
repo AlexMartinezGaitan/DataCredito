@@ -1,2 +1,2 @@
-1,Andres,caceres,andre@hotmail.com,1-Movistar-descripcionMovistar-false-12%2-Avantel-descripcionAvantel-true-20%3-BanAmerica-descripcionBanco-false-206
-2,Juan,Perez,Juan@hotmail.com,2-Claro-descripcionClaro-true-33%2-Avan-descripAvantel-true-20
+1,Andres,caceres,andre@hotmail.com,1-Movistar-descripcionMovistar-false-12%2-Avantel-descripcionAvantel-true-20%3-BanAmerica-descripcionBanco-false-206%
+2,Juan,Perez,Juan@hotmail.com,2-Claro-descripcionClaro-true-33%2-Avan-descripAvantel-true-20%

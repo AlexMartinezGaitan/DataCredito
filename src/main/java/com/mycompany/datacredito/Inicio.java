@@ -28,32 +28,57 @@ public class Inicio {
 
         Scanner entrada = new Scanner(System.in);
         int opc = 1;
+        int opc2 = 1;
+        String cadena = null;
 
         while (opc == 1) {
-            
+
             System.out.print("Ingrese la cedula de la persona: ");
             int cedula = entrada.nextInt();
             entrada.nextLine();
-            
+
             System.out.print("Ingrese el nombre de la persona: ");
             String nombre = entrada.nextLine();
-            
+
             System.out.print("Ingrese el apellido de la persona: ");
             String apellido = entrada.nextLine();
 
             System.out.print("Ingrese el correo de la persona: ");
             String correo = entrada.nextLine();
 
-            Persona per = new Persona(cedula, nombre, apellido, correo);
-            listaPersona.add(per);
+            cadena = cedula + "," + nombre + "," + apellido + "," + correo + ",";
+            while (opc2 == 1) {
+                System.out.print("Ingrese el codigo del reporte: ");
+                int codigo = entrada.nextInt();
+                entrada.nextLine();
+
+                System.out.print("Ingrese el nombre de la empresa: ");
+                String empresa = entrada.nextLine();
+
+                System.out.print("Ingrese la descripcion del reporte: ");
+                String descrip = entrada.nextLine();
+
+                System.out.print("Ingrese el estado del reporte: ");
+                boolean estado = entrada.nextBoolean();
+
+                System.out.print("Ingrese el valor del reporte: ");
+                int valor = entrada.nextInt();
+                entrada.nextLine();
+                cadena = cadena + codigo + "-" + empresa + "-" + descrip + "-" + estado+"-"+valor+"%";
+                System.out.print("Digite 1 para ingresar otro reporte: ");
+                opc2 = entrada.nextInt();
+
+            }
+            // per = new Persona(cedula, nombre, apellido, correo);
+            //listaPersona.add(per);
 
             System.out.print("Digite 1 para ingresar otra persona: ");
             opc = entrada.nextInt();
         }
-
-        for (Persona lisPersona : listaPersona) {
-            System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
-        }
+              System.out.print(cadena);
+        //for (Persona lisPersona : listaPersona) {
+            //System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
+        //}
 
     }
 
