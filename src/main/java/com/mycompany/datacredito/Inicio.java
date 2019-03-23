@@ -22,38 +22,37 @@ public class Inicio {
 
     //List<Persona> listaPersona;
     List<Reporte> listaReporte;
-   List<Persona> listaPersona = new ArrayList<>();
-    public void ingreserReporte() {
+    List<Persona> listaPersona = new ArrayList<>();
+
+    public void ingreserPersonaReporte() {
 
         Scanner entrada = new Scanner(System.in);
         int opc = 1;
-       
-       
-            while (opc == 1) {
-                System.out.print("Ingrese la cedula de la persona: ");
-                int cedula = entrada.nextInt(); 
-                System.out.print("Ingrese el nombre de la persona: ");
-                String nombre = entrada.nextLine();
-                 entrada.nextLine();
-                
-                System.out.print("Ingrese el apellido de la persona: ");
-                String apellido = entrada.nextLine();
- 
-                System.out.print("Ingrese el correo de la persona: ");
-                String correo = entrada.nextLine();
 
-                Persona per = new Persona(cedula, nombre, apellido, correo);
-                listaPersona.add(per);
+        while (opc == 1) {
+            System.out.print("Ingrese la cedula de la persona: ");
+            int cedula = entrada.nextInt();
+            System.out.print("Ingrese el nombre de la persona: ");
+            String nombre = entrada.nextLine();
+            entrada.nextLine();
 
-                System.out.print("Digite 1 para ingresar otra persona: ");
-                opc = entrada.nextInt();
-            }
-                  
-            for (Persona lisPersona : listaPersona) {
-                System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
-            }
+            System.out.print("Ingrese el apellido de la persona: ");
+            String apellido = entrada.nextLine();
 
-       
+            System.out.print("Ingrese el correo de la persona: ");
+            String correo = entrada.nextLine();
+
+            Persona per = new Persona(cedula, nombre, apellido, correo);
+            listaPersona.add(per);
+
+            System.out.print("Digite 1 para ingresar otra persona: ");
+            opc = entrada.nextInt();
+        }
+
+        for (Persona lisPersona : listaPersona) {
+            System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
+        }
+
     }
 
     public List<Persona> leerArchivo(String archivo) throws Exception {
