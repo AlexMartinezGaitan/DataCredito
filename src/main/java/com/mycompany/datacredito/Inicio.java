@@ -33,7 +33,7 @@ public class Inicio {
         int opc = 1;
         int opc2 = 1;
         String cadena = "";
-        
+        /*
          while (opc == 1) {
 
          System.out.print("Ingrese la cedula de la persona: ");
@@ -81,12 +81,14 @@ public class Inicio {
          cadena = cadena + "!";
 
          }
-        //cadena = "52561,ddsnvkhs,dfsdnfk,bdhsjd,1-povfs-ddvnk-true-561%!655,sdbvkhsf,dhsfbsdm,kjfgns,2-uihdfik-hgdksf-false-52565%2-uisdhviks-sdnuihsd-true-26526%!";
+         */
+        cadena = "52561,ddsnvkhs,dfsdnfk,bdhsjd,1-povfs-ddvnk-true-561%!655,sdbvkhsf,dhsfbsdm,kjfgns,2-uihdfik-hgdksf-false-52565%2-uisdhviks-sdnuihsd-true-26526%!";
         System.out.print(cadena);
         FileWriter fichero = null;
         PrintWriter pw = null;
+        FileReader rea= null;
         try {
-            fichero = new FileWriter("Archivos/a.txt");
+            rea = new FileReader("Archivos/a.txt");
             pw = new PrintWriter(fichero);
             String[] cad = cadena.split("!");
             int longitud = cad.length;
