@@ -36,47 +36,47 @@ public class Inicio {
 
         while (opc == 1) {
 
-            System.out.print("Ingrese la cedula de la persona: ");
+            System.out.print("\033[34mIngrese la cedula de la persona: ");
             int cedula = entrada.nextInt();
             entrada.nextLine();
 
-            System.out.print("Ingrese el nombre de la persona: ");
+            System.out.print("\033[34mIngrese el nombre de la persona: ");
             String nombre = entrada.nextLine();
 
-            System.out.print("Ingrese el apellido de la persona: ");
+            System.out.print("\033[34mIngrese el apellido de la persona: ");
             String apellido = entrada.nextLine();
 
-            System.out.print("Ingrese el correo de la persona: ");
+            System.out.print("\033[34mIngrese el correo de la persona: ");
             String correo = entrada.nextLine();
 
             cadena = cadena + cedula + "," + nombre + "," + apellido + "," + correo + ",";
             opc2 = 1;
             while (opc2 == 1) {
-                System.out.print("Ingrese el codigo del reporte: ");
+                System.out.print("\033[34mIngrese el codigo del reporte: ");
                 int codigo = entrada.nextInt();
                 entrada.nextLine();
 
-                System.out.print("Ingrese el nombre de la empresa: ");
+                System.out.print("\033[34mIngrese el nombre de la empresa: ");
                 String empresa = entrada.nextLine();
 
-                System.out.print("Ingrese la descripcion del reporte: ");
+                System.out.print("\033[34mIngrese la descripcion del reporte: ");
                 String descrip = entrada.nextLine();
 
-                System.out.print("Ingrese el estado del reporte: ");
+                System.out.print("\033[34mIngrese el estado del reporte: ");
                 boolean estado = entrada.nextBoolean();
 
-                System.out.print("Ingrese el valor del reporte: ");
+                System.out.print("\033[34mIngrese el valor del reporte: ");
                 int valor = entrada.nextInt();
                 entrada.nextLine();
                 cadena = cadena + codigo + "-" + empresa + "-" + descrip + "-" + estado + "-" + valor + "%";
-                System.out.print("Digite 1 para ingresar otro reporte: ");
+                System.out.print("\033[32mDigite 1 para ingresar otro reporte: ");
                 opc2 = entrada.nextInt();
 
             }
             // per = new Persona(cedula, nombre, apellido, correo);
             //listaPersona.add(per);
 
-            System.out.print("Digite 1 para ingresar otra persona: ");
+            System.out.print("\033[32mDigite 1 para ingresar otra persona: ");
             opc = entrada.nextInt();
             cadena = cadena + "!";
 
@@ -102,7 +102,7 @@ public class Inicio {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Success...");
+        System.out.println("\033[32mSuccess...");
         //for (Persona lisPersona : listaPersona) {
         //System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
         //}
@@ -141,11 +141,11 @@ public class Inicio {
             return listaPersona;
 
         } catch (FileNotFoundException ex) {
-            System.err.print("No se puede encontra el archivo");
+            System.err.print("\033[31mNo se puede encontra el archivo");
             throw new FileNotFoundException("No se puede encontra el archivo");
         } catch (IOException ex) {
-            System.err.print("Error al leer el archivo");
-            throw new IOException("Error al leer el archivo");
+            System.err.print("\033[31mError al leer el archivo");
+            throw new IOException("\033[31mError al leer el archivo");
         }
 
     }
@@ -186,10 +186,10 @@ public class Inicio {
         }
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Ingrese la cedula de la persona: ");
+        System.out.print("\033[34mIngrese la cedula de la persona: ");
         int cedula = entrada.nextInt();
         entrada.nextLine();
-        System.out.print("Ingrese el codigo del reporte: ");
+        System.out.print("\033[34mIngrese el codigo del reporte: ");
         int codigo = entrada.nextInt();
         entrada.nextLine();
         for (Persona x : listaPersona) {
@@ -220,7 +220,7 @@ public class Inicio {
             }
             //cierra el buffer intermedio
             bfwriter.close();
-            System.out.println("Archivo creado satisfactoriamente..");
+            System.out.println("\033[32mArchivo creado satisfactoriamente..");
 
         } catch (IOException e) {
             e.printStackTrace();
