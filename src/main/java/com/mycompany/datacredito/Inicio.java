@@ -51,6 +51,7 @@ public class Inicio {
 
             cadena = cadena + cedula + "," + nombre + "," + apellido + "," + correo + ",";
             opc2 = 1;
+            
             while (opc2 == 1) {
                 System.out.print("Ingrese el codigo del reporte: ");
                 int codigo = entrada.nextInt();
@@ -73,8 +74,6 @@ public class Inicio {
                 opc2 = entrada.nextInt();
 
             }
-            // per = new Persona(cedula, nombre, apellido, correo);
-            //listaPersona.add(per);
 
             System.out.print("Digite 1 para ingresar otra persona: ");
             opc = entrada.nextInt();
@@ -103,9 +102,6 @@ public class Inicio {
             e.printStackTrace();
         }
         System.out.println("Success...");
-        //for (Persona lisPersona : listaPersona) {
-        //System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
-        //}
 
     }
 
