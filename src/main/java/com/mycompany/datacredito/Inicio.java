@@ -51,7 +51,7 @@ public class Inicio {
 
             cadena = cadena + cedula + "," + nombre + "," + apellido + "," + correo + ",";
             opc2 = 1;
-            
+
             while (opc2 == 1) {
                 System.out.print("\033[34mIngrese el codigo del reporte: ");
                 int codigo = entrada.nextInt();
@@ -175,7 +175,7 @@ public class Inicio {
             System.err.print("Error al leer el archivo");
         }
         for (Persona x : listaPersona) {
-            System.out.println("Cedula: "+x.getCedula()+" Nombre: " + x.getNombre() + " Apellido: " + x.getApellido() + " correo: " + x.getCorreo());
+            System.out.println("Cedula: " + x.getCedula() + " Nombre: " + x.getNombre() + " Apellido: " + x.getApellido() + " correo: " + x.getCorreo());
             for (Reporte r : x.getReporte()) {
                 if (r.isEstado() == false) {
                     System.out.println(" codigo: " + r.getCodigo() + " Empresa: " + r.getEmpresa() + " Descricion: " + r.getDescripcion() + " Valor: " + r.getValor());
@@ -210,12 +210,12 @@ public class Inicio {
             BufferedWriter bfwriter = new BufferedWriter(flwriter);
             for (Persona persona : listaPersona) {
                 //escribe los datos en el archivo
-                bfwriter.write(persona.getCedula() + "," + persona.getNombre() + "," + persona.getApellido()+ "," + persona.getCorreo() + ",");
+                bfwriter.write(persona.getCedula() + "," + persona.getNombre() + "," + persona.getApellido() + "," + persona.getCorreo() + ",");
                 for (Reporte r : persona.getReporte()) {
-                bfwriter.write(r.getCodigo()+ "-" + r.getEmpresa()+ "-" + r.getDescripcion()+ "-" +r.isEstado() + "-"+r.getValor()+"%");
-               
+                    bfwriter.write(r.getCodigo() + "-" + r.getEmpresa() + "-" + r.getDescripcion() + "-" + r.isEstado() + "-" + r.getValor() + "%");
+
                 }
-                 bfwriter.newLine();
+                bfwriter.newLine();
             }
             //cierra el buffer intermedio
             bfwriter.close();
@@ -226,13 +226,4 @@ public class Inicio {
 
         }
     }
-
-    
-
-    
-
-    public void escribirPersonaReporte() {
-
-    }
-
 }
