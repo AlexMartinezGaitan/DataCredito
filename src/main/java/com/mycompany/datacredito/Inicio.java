@@ -51,6 +51,7 @@ public class Inicio {
 
             cadena = cadena + cedula + "," + nombre + "," + apellido + "," + correo + ",";
             opc2 = 1;
+            
             while (opc2 == 1) {
                 System.out.print("\033[34mIngrese el codigo del reporte: ");
                 int codigo = entrada.nextInt();
@@ -73,8 +74,6 @@ public class Inicio {
                 opc2 = entrada.nextInt();
 
             }
-            // per = new Persona(cedula, nombre, apellido, correo);
-            //listaPersona.add(per);
 
             System.out.print("\033[32mDigite 1 para ingresar otra persona: ");
             opc = entrada.nextInt();
