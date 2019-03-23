@@ -88,24 +88,29 @@ public class Inicio {
         PrintWriter pw = null;
         FileReader rea= null;
         try {
-            rea = new FileReader("Archivos/a.txt");
-            pw = new PrintWriter(fichero);
+            
+            fichero = new FileWriter("Archivos/a.txt",true);
+            //pw = new PrintWriter(fichero);
+            BufferedWriter bfwriter = new BufferedWriter(fichero);
             String[] cad = cadena.split("!");
             int longitud = cad.length;
             for (int i = 0; i < longitud; i++) {
-                pw.println(cad[i]);
+                bfwriter.write(cad[i]);
+                bfwriter.newLine();
 
             }
+            
+            bfwriter.close();
             fichero.close();
         } catch (Exception e) {
             e.printStackTrace();
-
+        }
             System.out.println("Success...");
             //for (Persona lisPersona : listaPersona) {
             //System.out.println("Cedula:" + lisPersona.getCedula() + "Nombre: " + lisPersona.getNombre() + "Apellido: " + lisPersona.getApellido() + "Correo: " + lisPersona.getCorreo());
             //}
-
-        }
+    
+        
     }
 
     public List<Persona> leerArchivo(String archivo) throws Exception {
