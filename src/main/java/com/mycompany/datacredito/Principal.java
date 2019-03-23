@@ -26,7 +26,7 @@ public class Principal {
  // List<Persona> listaPersona;
   //listaPersona= ini.leerArchivo("Archivos/informacion.txt");
  // ini.imprimepersona(listaPersona);
-  ini.ingreserReporte();
+  ini.ingreserPersonaReporte();
   
 }
 }
