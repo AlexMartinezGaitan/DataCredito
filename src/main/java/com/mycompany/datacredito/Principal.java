@@ -17,16 +17,14 @@ import java.util.List;
  * @author Alexander Martinez
  */
 public class Principal {
- 
-  public static void main(String[] args) throws Exception{
-    
-     
-  Inicio ini = new Inicio();
-  
- // List<Persona> listaPersona;
-  //listaPersona= ini.leerArchivo("Archivos/informacion.txt");
- // ini.imprimepersona(listaPersona);
-  ini.ingreserPersonaReporte();
-  
-}
+
+    public static void main(String[] args) throws Exception {
+
+        Inicio ini = new Inicio();
+        ini.ingreserPersonaReporte();
+        List<Persona> listaPersona;
+        listaPersona = ini.leerArchivo("Archivos/informacion.txt");
+        ini.imprimepersona(listaPersona);
+
+    }
 }

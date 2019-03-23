@@ -30,12 +30,14 @@ public class Inicio {
         int opc = 1;
 
         while (opc == 1) {
+            
             System.out.print("Ingrese la cedula de la persona: ");
             int cedula = entrada.nextInt();
+            entrada.nextLine();
+            
             System.out.print("Ingrese el nombre de la persona: ");
             String nombre = entrada.nextLine();
-            entrada.nextLine();
-
+            
             System.out.print("Ingrese el apellido de la persona: ");
             String apellido = entrada.nextLine();
 
