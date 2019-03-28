@@ -86,7 +86,7 @@ public class Inicio {
 
         try {
 
-            fichero = new FileWriter("Archivos/a.txt", true);
+            fichero = new FileWriter("Archivos/informacion.txt", true);
             BufferedWriter bfwriter = new BufferedWriter(fichero);
             String[] cad = cadena.split("!");
             int longitud = cad.length;
